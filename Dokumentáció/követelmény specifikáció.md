@@ -5,10 +5,7 @@ A projekt célja, hogy létrehozzon egy webes felületet, amelyen a regisztrált
 ## 2. A jelenlegi helyzet leírása
 Jelenleg ezt a vonalat a framed.wtf domain címen elérhető weboldal képviseli. Ezen az oldalon film/sorozat címeket kell kitalálni. Ehhez hasonló tematikájú weben elérhető oldalról nincsen tudomásunk.
 ## 3. Vágyálomrendszer
-
-## 4. Jelenlegi üzleti folyamatok modellje
-
-## 5. Igényelt üzleti folyamatok modellje
+A projekt célja bővebben, hogy létrehozzon egy weboldalt, amelyen lehetőség van regisztrálni felhasználókat és a már regisztrált felhasználói adatokkal bejelentkezni. Csak a belépést követően elérhető a tartalom. A weboldalon több képből van lehetőség kitalálni egy videójáték címet, ez a felület 24 óránként frissül. Az éppen nem aktuális, korábban megjelent kérdések archiválva elérhetőek maradnak. Statisztika készül, amely a képek és az eltelt időt is figyelembe véve alakít ki azon felhasználókból toplistát, akik kitöltötték a kérdőívet. Admin panelen keresztül készíthető adott dátumra kérdőív.
 
 ## 6. Követelménylista
 
