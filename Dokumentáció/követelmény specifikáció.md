@@ -1,7 +1,7 @@
 # Követelmény specifikáció
 
 ## 1. Áttekintés
-
+A projekt célja, hogy létrehozzon egy webes felületet, amelyen a regisztrált/bejelentkezett felhasználók lehetőséget kapnak naponta megválaszolni egy kérdést. A kérdés 24 óránként frissül. Egy játék nevet kell kitalálni, képek alapján. Automatikusan frissülő statisztika is elérhető az eredményekről. A nem aktuális kérdések archivált ként elérhetőek maradnak.
 ## 2. A jelenlegi helyzet leírása
 
 ## 3. Vágyálomrendszer
