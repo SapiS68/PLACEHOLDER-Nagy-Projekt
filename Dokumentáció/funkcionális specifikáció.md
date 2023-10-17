@@ -15,6 +15,10 @@
 
 ## 6. Használati esetek
 
+- **Újonnan érkezők, nem bejelentkezett felhasználók**: El tudja érni a regisztrációs, illetve a bejelentkezési oldalt, ahol új fiókot tud létrehozni, vagy meglévővel tud belépni.
+- **Bejelentkezett felhasználók**: Naponként egy játékmenetet tud lejátszani, illetve meg tudja tekinteni a saját és globális statisztikáit, illetve az előzőleg lejátszódott játékmenetekhez kapcsolatos információkat (képek, statisztikák stb.).
+- **Rendszergazdák**: Átlagos felhasználók funkcionalitásain kívül következő napokra tudnak létrehozni/módosítani kitalálandókat, illetve más felhasználók jogosultságait tudják szerkeszteni.
+
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 
 ## 8. Képernyőtervek
