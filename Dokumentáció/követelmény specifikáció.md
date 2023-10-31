@@ -1,7 +1,7 @@
 # Követelmény specifikáció
 
 ## 1. Áttekintés
-A projekt célja, hogy létrehozzon egy webes felületet, amelyen a regisztrált/bejelentkezett felhasználók lehetőséget kapnak naponta megválaszolni egy kérdést. A kérdés 24 óránként frissül. Egy játék nevet kell kitalálni, képek alapján. Automatikusan frissülő statisztika is elérhető az eredményekről. A nem aktuális kérdések archivált ként elérhetőek maradnak.
+A projekt célja, hogy létrehozzon egy webes felületet, amelyen a regisztrált/bejelentkezett felhasználók lehetőséget kapnak naponta megválaszolni egy kérdést. A kérdés 24 óránként frissül. A kérdéseket megfelelő jogosultsággal meg lehet adni, illetve szerkeszteni. Egy játék nevet kell kitalálni, képek alapján. A rögzítésre kerülő statisztika az időt és a kitaláláshoz szükséges a felhasználó által megtekintett képek számától függ. Automatikusan frissülő statisztika is elérhető a jelenlegi és korábban teljesített eredményekről. A nem aktuális kérdések a korábban feltöltött képekkel együtt archivált ként elérhetőek maradnak minden látogató számára. 
 ## 2. A jelenlegi helyzet leírása
 Jelenleg ezt a vonalat a framed.wtf domain címen elérhető weboldal képviseli. Ezen az oldalon film/sorozat címeket kell kitalálni. Ehhez hasonló tematikájú weben elérhető oldalról nincsen tudomásunk.
 ## 3. Vágyálomrendszer
