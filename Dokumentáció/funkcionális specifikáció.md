@@ -23,7 +23,32 @@
 
 ## 8. Képernyőtervek
 
-![képnév](gitlink ahol a kép van)
+### Regisztrációs oldal
+![regisztráció](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/register.png)
+
+### Bejelentkezési oldal
+![bejelentkezés](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/login.png)
+
+### Folyamatban lévő játék
+![játék folyamatban](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/game.png)
+
+### Lejátszott játékmenet megtekintése
+![lejátszott játék](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/gamewon.png)
+
+### Statisztika oldal
+![statisztikák](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/stats.png)
+
+### Archívum oldal
+![archívum](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/archive.png)
+
+### Jelszómódosító oldal
+![jelszó módosítása](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/edituser.png)
+
+### ADMIN - kérdőívhozzáadó/módosító oldal
+![kérdőív hozzáadása/módosítása](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/editprompt.png)
+
+### ADMIN - rendszergazdakezelő oldal
+![rendszergazdák kezelése](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/editadmin.png)
 
 ## 9. Forgatókönyvek
 
