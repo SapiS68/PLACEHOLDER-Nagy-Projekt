@@ -19,11 +19,11 @@
 |-------------------------|----------------------------------------|-----------|---------------|------------------------|------------------|---------------------|
 |Követelmény specifikáció |Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |             
 |Funkcionális specifikáció|Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |
-|Rendszerterv             |Megírás                                 |         1 |             1 |                      1 |                1 |                   1 |
-|Program                  |Képernyőtervek elkészítése              |         2 |             1 |                      1 |                1 |                   1 |
-|Program                  |Prototípus elkészítése                  |         3 |             8 |                      8 |                8 |                   8 |
-|Program                  |Alapfunkciók elkészítése                |         3 |             8 |                      8 |                8 |                   8 |
-|Program                  |Tesztelés                               |         4 |             2 |                      2 |                2 |                   2 |
+|Rendszerterv             |Megírás                                 |         1 |             2 |                      2 |                0|                   2 |
+|Weboldal                  |Frontend           |         2 |             4 |                      4 |                0 |                   4|
+|Weboldal                |Adatbázis                 |         3|             4 |                      4 |                0 |                   4|
+|Weboldal                 |Backend              |         3 |             6 |                     6 |                0 |                   6|
+|Weboldal                |Tesztelés                               |         2|             2 |                      0 |               0|                   2|
 
 ### 2.4 Mérföldkövek:
    * Prototípus átadása
