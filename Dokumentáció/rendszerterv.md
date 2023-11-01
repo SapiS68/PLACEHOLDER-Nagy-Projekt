@@ -4,14 +4,14 @@
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelőségek:
-   * Scrum masters:
-   * Product owner: 
-   * Üzleti szereplő:
+   * Scrum masters: Verebélyi Valentin
+   * Product owner: Dr. Tajti Tibor Gábor
+   * Üzleti szereplő: Dr. Tajti Tibor Gábor
      
 ### 2.2 Projektmunkások és felelőségek:
-   * Frontend:
-   * Backend:
-   * Tesztelés:
+   * Frontend: Törteli Márton
+   * Backend: Balázs Gábor, Tóth Csanád, Kovács Bence
+   * Tesztelés: Balázs Gábor, Tóth Csanád, Kovács Bence, Törteli Márton
      
 ### 2.3 Ütemterv:
 
