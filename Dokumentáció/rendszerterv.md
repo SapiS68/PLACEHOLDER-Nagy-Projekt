@@ -68,15 +68,13 @@
      * Rendszergazda kezelő
 
 ## 6. Fizikai környezet
-
-### Vásárolt softwarekomponensek és külső rendszerek
-
-### Hardver topológia
-
-### Fizikai alrendszerek
-
-### Fejlesztő eszközök
-
+   * A szoftver Windows platformon készül, viszont wbes felületen működik.
+   * Minden kliensen szükséges egy webkliens használata, mely képes a weboldalt megjeleníteni.
+   * Nincsenek megvásárolt komponensek.
+   * Fejlesztői eszközök:
+     * Composer
+     * XAMPP
+     * NodeJS
 
 ## 8. Architekturális terv
 
