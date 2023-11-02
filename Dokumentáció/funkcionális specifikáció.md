@@ -3,6 +3,7 @@
 A framed.wtf oldalon található minta alapjára készül a weboldal. Az oldal célja játékos, filmek címét kell kitalálni egy megadott számú képkivágás alapján. Az előzőleg kiválaszott filmek megtekinthetőek egy archívumban, melyek lineárisan vannak sorszámozva. Minden felhasználó megtekintheti saját statisztikáit, mely a helyes találatok számát, találati arányt, és egyéb információkat jelenítenek meg. Nincsenek regisztrált felhasználók, így globális ranglista sincs, mely hiányában a pontszámok összehasonlítása nem lehetséges.
 
 ## 2. Vágyálomrendszer leírása
+Az elkészíteni kívánt oldal célja a fent olvasható minta alapját kiegészíteni regisztrált felhasználókkal és globális statisztikával. Az oldal tartalma regisztráció után érhető el. Videójátékokat kell kitalálni képkivágások alapján, a játék végén pedig statisztika készül teljesítményünkről. Az előző játékok egy archívumban visszanézhetőek, mivel minden nap új játékot kell kitalálni. Az adminisztrátorok képesek egyes komponenseket szerkeszteni.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
 
