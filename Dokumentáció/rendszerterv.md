@@ -87,6 +87,8 @@
 ## 9. Adatbázis terv
 
 ## 10. Implementációs terv
+   * Adatbázis rendszer SQL nyelvben íródik, XAMPP futtatásával.
+   * A felhasználói felület, maga a weboldal, PHP és HTML segítségével épül fel.
 
 ## 11. Tesztterv
 
