@@ -53,8 +53,19 @@
 ## 5. Funkcionális terv
 
 ### 5.1 Rendszerszereplők
+   * Felhasználó
+   * Adminisztrátor
 
 ### 5.2 Menühierarchiák
+   * Felhasználó:
+     * Archívum
+     * Sztatisztika
+     * Beállítások
+     * Kijelentkezés
+   * Adminisztrátor:
+     * Minden, ami a felhasználónak lehetséges
+     * Kérdőív módosítás
+     * Rendszergazda kezelő
 
 ## 6. Fizikai környezet
 
