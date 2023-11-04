@@ -40,15 +40,24 @@
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K1 | ... | ... |
+| K1 | Felhasználókezelés | Egy felhasználónak legyen lehetősége regisztrálni, majd azzal bejelentkezni, abból kijelentkezni, illetve saját jelszavát tudja módosítani. |
+| K2 | Hozzáférési szintek definiálása | Egy felhasználó csak akkor férhessen hozzá megadott oldalakhoz, ha ahhoz hozzáférése van. Például a játékoldalt csak bejelentkezéssel, az adminkezelést pedig csak rendszergazda jogosultsággal tudhassa egy felhasználó megtekinteni. |
+| K3 | Játékkal való interakció | A felhasználónak legyen lehetősége egy, az aznapi kérdőívhez tartozó játékmenetet elindítani, befejezni, ha még aznap nem fejezett egyet be. |
+| K4 | Játékmenet eredményeinek megtekintése | Egy lejátszott játékmenet során legyen megengedve a felhasználónak az ahhoz tartozó statisztikák megjelenítésére. |
+| K5 | Előző játékmenetek megtekintése | Az archívumból a felhasználónak legyen lehetősége megtekinteni egy előző napi kérdőívnek az eredményeit, a K4-ben kifejtettekhez hasonlóan. |
+| K6 | Személyhez tartozó statisztikák megjelenítése | Nyújtsunk lehetőséget a felhasználó felé, hogy az eddigi elért átlageredményeit meg tudja tekinteni. |
+| K7 | Kérdőívek hozzáadása, módosítása | Egy rendszergazda számára legyen szerkeszthető a jövőben megjelenítendő kérdőívek rekordjai. |
+| K8 | Felhasználói jogok kezelése | Egy rendszergazda tudja módosítani a tőle, illetve a tulajdonoson kívül más felhasználók jogait bővíteni, illetve csökkenteni. |
 
 ### Nemfunkcionális követelmények
 
 | ID | Megnevezés | Leírás |
 | --- | --- | --- |
-| K4 | ... | ... |
+| K9 | Egyszerű design | Az oldal felülete legyen könnyű a szemeknek, legyen átlátható, egyszerűen használható. Ne legyen túldíszített, a felületek csak enyhe színeket, képelemeket alkalmazzanak. |
 
 ### Támogatott eszközök
+
+A használt keretrendszerek platformfüggetlensége végett akármilyen korszerű szervergépre feltelepíthetőek az alkalmazott szoftverek. Kliens esetén csak egy böngészőre van szükségünk, az oldal akármilyen rendszeren megtekinthető.
 
 ## 5. Funkcionális terv
 
