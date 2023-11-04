@@ -168,10 +168,16 @@ Szoftver telepítési terv:
 
 ## 13. Karbantartási terv
 
-Fontos ellenőrizni:
-...
+Minden esetben fontos ellenőrizni az alábbiakat:
+- A szervergép fut, a külvilág hozzá tud a rajta futó oldalhoz férni
+- Az oldal-adatbázis kommunikáció hibátlanul működik, a módosítások az adatbázisban elmentődnek
+- A szerver-kliens kommunikáció nem lassú, gyorsan tud reagálni a szerver a kliens interakcióira, illetve a szerver a megfelelő visszajelzést küldi vissza
 
-Figyelembe kell venni a felhasználó által jött visszajelzést is a programmal kapcsolatban.
+Figyelmet kell biztosítani a kérdőívek folyamatos feltöltésére is. A játékmenetek készítése nem történik automatikusan, így ezt a feladatot rendszergazdáknak kell elvégezniük. Minél kevesebb kérdőívet teszünk fel egyszerre a rendszerbe, annál gyakrabban kell ezt elvégezni.
+
+Figyelembe kell venni a felhasználó által jött visszajelzést is az oldallal kapcsolatban.
 Ha hibát talált, mielőbb orvosolni kell, lehet az:
 *	Működéssel kapcsolatos
 *	Kinézet, dizájnnal kapcsolatos
+
+Adjunk lehetőséget a felhasználóknak ötletek adására is, amellyel bővíthetjük a weboldal funkcióit. Ezeket implementáljuk be minél hamarabb, hogy a felhasználók a lehető leggyorsabban férjenek hozzá az új élményekhez.
