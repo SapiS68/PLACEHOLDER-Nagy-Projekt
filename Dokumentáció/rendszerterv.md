@@ -31,8 +31,19 @@
 ## 3. Üzleti folyamatok modellje
 
 ### 3.1 Üzleti szereplők
+A weboldalt egy internetes b9ngészőn keresztül lehet elérni. A felhasználóknak regisztrálniuk kell, hogy használhassák az oldalt.
 
 ### 3.2 Üzleti folyamatok
+Bejelentkezés után a felhasználó meg próbálhatja megoldani a mai feladványt, megváltoztathatja a jelszavát, illetve megtekintheti az archivumot és a saját statisztikáit.
+
+   * Játék: ezen menúpont megnyomása után a felhasználó megpróbálhatja megoldani a mai nap frladatát, ha még nem próbálkozott. Ellenkező esetben megnézheti a feladványhoz tartozó statisztikákat. Az adminok ezen kíűl még tudnak új kérdéseket feltenni, a játékok adatbázisát szerkeszteni, és a rendszergazdai jogosultságot más felhasználóknak.
+   * Archivum: a felhasználó itt megnézheti a korábbi feladatok archivumát és a hozzájuk tartozó statisztikákat.
+   * Statisztikák: itt található a felhasználó egyéni statosztikái, amit a korábbi feladatok alapján határoz meg az oldal
+   * Beállítások: eme funkción keresztül lehet a jelszót átállítani.
+   * Kijelentkezés: a jelenlegi felhasználó kijelentkezik
+   * Admin - Rendszergazdakezelés: Rendszergazdai jogosultságokat lehet változtatni.
+   * Admin - Kérdőív hozzáadása: az újabb kérdéseket itt lehet szerkeszteni és hozzáadni
+   * Admin - Játék hozzáadása: az játékok adatbázisához lehet itt nevet és képet beállítani
 
 ## 4. Követelmények
 
