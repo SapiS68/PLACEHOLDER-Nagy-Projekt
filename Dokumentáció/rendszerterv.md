@@ -95,6 +95,8 @@ A használt keretrendszerek platformfüggetlensége végett akármilyen korszer�
 
 ## 9. Adatbázis terv
 
+![adatbázis](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/database.png)
+
 ## 10. Implementációs terv
    * Adatbázis rendszer SQL nyelvben íródik, XAMPP futtatásával.
    * A felhasználói felület, maga a weboldal, PHP és HTML segítségével épül fel.
