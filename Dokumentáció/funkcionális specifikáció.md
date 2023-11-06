@@ -15,7 +15,19 @@ Napjainkban az átlag figyelmi idő fokozatosan csökken, illetve egyre több id
 
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
-| K1 | ...| ... | ... |
+| K1 | Jogosultság | Regisztráció | A felhasználó beregisztrálhat e-mail cím, felhasználónév és jelszó megadása után. Ha az e-mail cím vagy a felhasználónév használatban van már, akkor a felhasználó egy hibaüzenetet kap. |
+| K2 | Jogosultság | Bejelentkezés | A felhasználó bejeltkezhet e-mail cím vagy felhasználónév és a jelszó megadásával. Ha valamelyiket hibásan adja meg, akkor a felhasználó egy hibaüzenetet kap. |
+| K3 | Jogosultság | Jogosultsági szintek | -Owner: admin, akinek a jogosultságát nem lehet módosítani. -Admin: új feladványok készítése, játék adatbázis szerkesztése, rendszergazdai jogosultság kezelés -Felhasználó: Napi feladvány megoldása, archivum és statisztikák megtekintése, beállítások módosítása |
+| K4 | Modifikáció | Felhasználói beállítások | A felhasználó át tudja állítani a jelszavát. |
+| K5 | Modifikáció | Rendszergazdai jogosultság állítása | Az adminok át tudják állítani, hogy ki lehet még admin. |
+| K6 | Modifikáció | Új kérdőív | Admin új feladványt készíthet, illetve egy már létezőt módosíthat. |
+| K7 | Modifikáció | Játékok adatbázisa | Admin új játékot vehet fel az adatbázisba, vagy pedig szerkeszthet egy már létező játékot. |
+| K8 | Modifikáció | Új jelszó kérése | Amennyiben a felhasználó elfelejtette a jelszavát, akkor az e-mail címére egy automatizált üzenetet küld a rendszer egy új jelszóval. |
+| K9 | Statisztika | Egyéni statisztika | A már kitöltött kérdőívek alapján a rendszer közli a felhasználóval a korábbi teljesítményét. |
+| K10 | Statisztika | Napi statisztika | A játék befejeztével a rendszer közli a felhasználóval, hogy aznap korábban milyen teljesítményt értek el más felhasználók. |
+| K11 | Archívum | Archívum megtekintése | A felhasználó megtekintheti a korábbi kérdéseket és a hozzájuk kapcsolódó statisztikát. |
+| K12 | Archívum | Archiválás | Az idő lejártával a rendszer automatikusan archiválja az aznapi feladványt és a statisztikát. |
+| K13 | Felület | Játékfelület | A felhasználó a napi feladatot kitalálhatja, illetve megtekintheti a hozzátartozó statisztikát a próbálkozása után. |
 
 ## 6. Használati esetek
 
