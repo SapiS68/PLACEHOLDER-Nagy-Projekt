@@ -6,6 +6,7 @@ A framed.wtf oldalon található minta alapjára készül a weboldal. Az oldal c
 Az elkészíteni kívánt oldal célja a fent olvasható minta alapját kiegészíteni regisztrált felhasználókkal és globális statisztikával. Az oldal tartalma regisztráció után érhető el. Videójátékokat kell kitalálni képkivágások alapján, a játék végén pedig statisztika készül teljesítményünkről. Az előző játékok egy archívumban visszanézhetőek, mivel minden nap új játékot kell kitalálni. Az adminisztrátorok képesek egyes komponenseket szerkeszteni.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
+Napjainkban az átlag figyelmi idő fokozatosan csökken, illetve egyre több időt töltünk az interneten, amit szinte bárhol, bármikot elérhetünk, ezen felül rengeteget kell dolgoznunk. Ebből adódan elég gyakori, hogy munka közbeni szünetben vagy szabadidőnkben valamilyen rövid, időpocsékoló folyamatot végzünk.
 
 ## 4. Igényelt üzleti folyamatok modellje
 
