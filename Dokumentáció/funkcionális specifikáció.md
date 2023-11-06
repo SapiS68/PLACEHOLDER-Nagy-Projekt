@@ -9,6 +9,7 @@ Az elkészíteni kívánt oldal célja a fent olvasható minta alapját kiegész
 Napjainkban az átlag figyelmi idő fokozatosan csökken, illetve egyre több időt töltünk az interneten, amit szinte bárhol, bármikot elérhetünk, ezen felül rengeteget kell dolgoznunk. Ebből adódan elég gyakori, hogy munka közbeni szünetben vagy szabadidőnkben valamilyen rövid, időpocsékoló folyamatot végzünk.
 
 ## 4. Igényelt üzleti folyamatok modellje
+![folyamatmodell](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/folyamatmodell.png)
 
 ## 5. Követelménylista
 
