@@ -175,9 +175,9 @@ Tesztszám | Rövid leírás | Várt eredmény | Eredmény | Megjegyzés
 
 ## 12. Telepítési terv
 
-Fizikai telepítési terv: 
+Fizikai telepítési terv: Az oldal eléréséhez internet kapcsolatra van szükség.
 
-Szoftver telepítési terv: 
+Szoftver telepítési terv: Egy az eszközre telepített, támogatott internetes böngésző.
 
 ## 13. Karbantartási terv
 
