@@ -1,6 +1,6 @@
 # Rendszerterv
 ## 1. A rendszer célja
-
+A rendszer célja hogy egy webes felületet biztosítson a témával kapcsolatos érdeklődők számára. Egy regisztrációt, belépést és profil módosítását tartalmazó felhasználó rendszert biztosítson, amelyben a jogok is beállítható. Naponta frissülő tartalommal szolgálja ki az oda látogatókat, amit a megfelelő jogosultsággal az adott felhasználó szerkeszthet, beállíthat. Biztosítsa a már nem aktuális tartalmak archiváltként való megtekintését minden oldalra látogató számára. Emellett fontos, hogy egy statisztika, toplista rendszer is áljon a rendelkezésére a felhasználóknak. A weboldal adatkezelése (pl: jelszavak) legyen biztonságos.
 ## 2. Projektterv
 
 ### 2.1 Projektszerepkörök, felelőségek:
