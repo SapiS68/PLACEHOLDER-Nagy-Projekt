@@ -88,7 +88,7 @@ A használt keretrendszerek platformfüggetlensége végett akármilyen korszer�
      * Rendszergazda kezelő
 
 ## 6. Fizikai környezet
-   * A szoftver Windows platformon készül, viszont wbes felületen működik.
+   * A szoftver Windows platformon készül, viszont webes felületen működik.
    * Minden kliensen szükséges egy webkliens használata, mely képes a weboldalt megjeleníteni.
    * Nincsenek megvásárolt komponensek.
    * Fejlesztői eszközök:
