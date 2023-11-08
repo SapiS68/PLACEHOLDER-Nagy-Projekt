@@ -37,6 +37,14 @@ Napjainkban az átlag figyelmi idő fokozatosan csökken, illetve egyre több id
 
 ## 7. Megfeleltetés, hogyan fedik le a használati eseteket a követelményeket
 
+K1, K2: A weboldalnak ez a kezdőlapja. Ahhoz, hogy az oldal többi részét a felhasználó elérhesse, be kell jelentkeznie. Ha még nincs fiókja, akkor bejelentkezés előtt még regisztrálnia is kell.
+K3, K5: A rendszergazdai jogosultságok működéséhez szükséges.
+K4, K8: A jelszavak kezeléséhez kell, illetve biztonságosabbá is teszi az oldalt.
+K6, K7: Ezek a felületek az adminok számára láthatóak. Ezen menüpontok használatával képesek új feladványokat adni.
+K9: A felhasználó megtekintheti a profilja oldalán.
+K11, K12: A felhasználó egyéni statisztikáinak a számításához van.
+K10, K13: A játékhoz vannak. A játékos a felületet használja, hogy megnézze a napi feladatot, illetve, hogy válaszoljon rá, majd utána megtekintheti a napi statisztikát.
+
 ## 8. Képernyőtervek
 
 ### Regisztrációs oldal
