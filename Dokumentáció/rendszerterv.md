@@ -36,7 +36,7 @@ A weboldalt egy internetes böngészőn keresztül lehet elérni. A felhasznál�
 ### 3.2 Üzleti folyamatok
 Bejelentkezés után a felhasználó megpróbálhatja megoldani a mai feladványt, megváltoztathatja a jelszavát, illetve megtekintheti az archívumot és a saját statisztikáit. Az adminok ezen kívűl még tudnak új kérdéseket feltenni, a játékok adatbázisát szerkeszteni, és rendszergazdai jogosultságot adni illetve elvenni más felhasználókntól.
 
-   * Játék: ezen menúpont megnyomása után a felhasználó megpróbálhatja megoldani a mai nap feladatát, ha még nem próbálkozott. Ellenkező esetben megnézheti a feladványhoz tartozó statisztikákat.
+   * Játék: ezen menüpont megnyomása után a felhasználó megpróbálhatja megoldani a mai nap feladatát, ha még nem próbálkozott. Ellenkező esetben megnézheti a feladványhoz tartozó statisztikákat.
    * Archívum: a felhasználó itt megnézheti a korábbi feladatok archívumát és a hozzájuk tartozó statisztikákat.
    * Statisztikák: itt található a felhasználó egyéni statisztikái, amit a korábbi feladatok alapján határoz meg az oldal.
    * Beállítások: eme funkción keresztül lehet a jelszót átállítani.
