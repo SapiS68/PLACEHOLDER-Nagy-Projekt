@@ -94,15 +94,15 @@ A használt keretrendszerek platformfüggetlensége végett akármilyen korszer�
    * Fejlesztői eszközök:
      * Composer
      * XAMPP
-     * NodeJS
+     * Node.js
 
 ## 8. Architekturális terv
 
-### Webszerver
+### Backend
+Az adatbázis szerverhez a MariaDB Servert használjuk, amit a XAMPP-on keresztül futtatunk. A JavaScript futtatási környezetét a Node.js biztosítja. Az oldal kódolásához HTML-t, PHP-t és Laravelt használunk. 
 
-### Adatbázis rendszer
-
-### A program elérése, kezelése
+### Frontend
+A megjelenést CSS-sel, HTML-lel, PHP-val és Laravellel fromázzuk.
 
 ## 9. Adatbázis terv
 
