@@ -203,7 +203,10 @@ Jogosultság elvonása esetén pedig a kívánt felhasználó melletti X gombra 
 
 | Id | Követelmény | Funkció |
 | :---: | --- | --- |
-| K4 | ... | ... |
+| K1 | Gyorsaság | A rendszernek minnél kevesebb idő alatt kell elérnie, és visszatérnie adattal az adatbázistól. |
+| K2 | Egyszerűség | A weboldalon belül minnél könnyebben lehessen navigálni, minden legyen egyértelműen elhelyezve, megjelenítve. |
+| K3 | Innovatív | További fejlesztéseket hoz egy eredeti ötlethez, így felhasználó-barátabb. |
+| K4 | Visszajátszás | A rendszer tematikája miatt érdemes többször visszatérni az oldal használatához, legjobb esetben naponta. |
 
 ## 11 Fogalomszótár
 - Admin/Rendszergazda: Olyan felhasználó, aki több, magasabb szintű privilégiummal rendelkezik.
