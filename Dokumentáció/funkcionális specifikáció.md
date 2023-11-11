@@ -1,12 +1,12 @@
 # Funkcionális specifikáció
 ## 1. Jelenlegi helyzet leírása
-A framed.wtf oldalon található minta alapjára készül a weboldal. Az oldal célja játékos, filmek címét kell kitalálni egy megadott számú képkivágás alapján. Az előzőleg kiválaszott filmek megtekinthetőek egy archívumban, melyek lineárisan vannak sorszámozva. Minden felhasználó megtekintheti saját statisztikáit, mely a helyes találatok számát, találati arányt, és egyéb információkat jelenítenek meg. Nincsenek regisztrált felhasználók, így globális ranglista sincs, mely hiányában a pontszámok összehasonlítása nem lehetséges.
+A framed.wtf oldalon található minta alapjára készül a weboldal. Az oldal célja játékos, filmek címét kell kitalálni egy megadott számú képkivágás alapján. Az előzőleg kiválasztott filmek megtekinthetőek egy archívumban, melyek lineárisan vannak sorszámozva. Minden felhasználó megtekintheti saját statisztikáit, mely a helyes találatok számát, találati arányt, és egyéb információkat jelenítenek meg. Nincsenek regisztrált felhasználók, így globális ranglista sincs, mely hiányában a pontszámok összehasonlítása nem lehetséges.
 
 ## 2. Vágyálomrendszer leírása
-Az elkészíteni kívánt oldal célja a fent olvasható minta alapját kiegészíteni regisztrált felhasználókkal és globális statisztikával. Az oldal tartalma regisztráció után érhető el. Videójátékokat kell kitalálni képkivágások alapján, a játék végén pedig statisztika készül teljesítményünkről. Az előző játékok egy archívumban visszanézhetőek, mivel minden nap új játékot kell kitalálni. Az adminisztrátorok képesek egyes komponenseket szerkeszteni.
+Az elkészíteni kívánt oldal célja a fent olvasható minta alapját kiegészíteni regisztrált felhasználókkal és globális statisztikával. Az oldal tartalma regisztráció után érhető el. Videó játékokat kell kitalálni képkivágások alapján, a játék végén pedig statisztika készül teljesítményünkről. Az előző játékok egy archívumban visszanézhetőek, mivel minden nap új játékot kell kitalálni. Az adminisztrátorok képesek egyes komponenseket szerkeszteni.
 
 ## 3. Jelenlegi üzleti folyamatok modellje
-Napjainkban az átlag figyelmi idő fokozatosan csökken, illetve egyre több időt töltünk az interneten, amit szinte bárhol, bármikot elérhetünk, ezen felül rengeteget kell dolgoznunk. Ebből adódan elég gyakori, hogy munka közbeni szünetben vagy szabadidőnkben valamilyen rövid, időpocsékoló folyamatot végzünk.
+Napjainkban az átlag figyelmi idő fokozatosan csökken, illetve egyre több időt töltünk az interneten, amit szinte bárhol, bármikor elérhetünk, ezen felül rengeteget kell dolgoznunk. Ebből adódóan elég gyakori, hogy munka közbeni szünetben vagy szabadidőnkben valamilyen rövid, időpocsékoló folyamatot végzünk.
 
 ## 4. Igényelt üzleti folyamatok modellje
 ![folyamatmodell](https://github.com/SapiS68/PLACEHOLDER-Nagy-Projekt/blob/main/Dokument%C3%A1ci%C3%B3/imgs/folyamatmodell.png)
@@ -16,7 +16,7 @@ Napjainkban az átlag figyelmi idő fokozatosan csökken, illetve egyre több id
 | Id | Modul | Név | Leírás |
 | :---: | --- | --- | --- |
 | K1 | Jogosultság | Regisztráció | A felhasználó beregisztrálhat e-mail cím, felhasználónév és jelszó megadása után. Ha az e-mail cím vagy a felhasználónév használatban van már, akkor a felhasználó egy hibaüzenetet kap. |
-| K2 | Jogosultság | Bejelentkezés | A felhasználó bejeltkezhet e-mail cím vagy felhasználónév és a jelszó megadásával. Ha valamelyiket hibásan adja meg, akkor a felhasználó egy hibaüzenetet kap. |
+| K2 | Jogosultság | Bejelentkezés | A felhasználó bejelentkezhet e-mail cím vagy felhasználónév és a jelszó megadásával. Ha valamelyiket hibásan adja meg, akkor a felhasználó egy hibaüzenetet kap. |
 | K3 | Jogosultság | Jogosultsági szintek | -Owner: admin, akinek a jogosultságát nem lehet módosítani. -Admin: új feladványok készítése, játék adatbázis szerkesztése, rendszergazdai jogosultság kezelés -Felhasználó: Napi feladvány megoldása, archivum és statisztikák megtekintése, beállítások módosítása |
 | K4 | Modifikáció | Felhasználói beállítások | A felhasználó át tudja állítani a jelszavát. |
 | K5 | Modifikáció | Rendszergazdai jogosultság állítása | Az adminok át tudják állítani, hogy ki lehet még admin. |
@@ -206,3 +206,8 @@ Jogosultság elvonása esetén pedig a kívánt felhasználó melletti X gombra 
 | K4 | ... | ... |
 
 ## 11 Fogalomszótár
+- Admin/Rendszergazda: Olyan felhasználó, aki több, magasabb szintű privilégiummal rendelkezik.
+- Archívum: Régebbi dokumentumok gyűjteménye.
+- Jogosultság: Egy felhasználónak megadott szerepkörök és használati limitációk.
+- Modifikáció: Változtatás.
+- Statisztika: Egyedi adatok gyűjteménye.
