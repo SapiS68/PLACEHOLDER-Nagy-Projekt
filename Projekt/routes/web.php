@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+/* Regisztráció */
+Route::post('/register', [UserController::class, 'register']);
+
+/* Bejelentkezés */
+Route::post('/loginaction', [UserController::class, 'login']);
+
+/* Kijelentkezés */
+Route::post('/logout', [UserController::class, 'logout']);
+
+/* Jelszómódosítás */
+Route::post('/modifypass', [UserController::class, 'modifyPass']);
