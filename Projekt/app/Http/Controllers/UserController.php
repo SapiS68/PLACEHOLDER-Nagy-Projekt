@@ -74,7 +74,8 @@ class UserController extends Controller
     }
 
     public function logout(Request $request) {
-        
+        auth()->logout();
+        return redirect('/login');
     }
 
     public function modifyPass(Request $request) {
