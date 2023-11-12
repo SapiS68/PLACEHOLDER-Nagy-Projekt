@@ -30,7 +30,7 @@ class UserController extends Controller
         // Validálási hibák kiiratása a regisztrációs ablaknál
         $validator = Validator::make($request, $rules, $messages);
         if($validator->fails()) {
-            return Redirect::back()->withErrors($validator)->withInput();
+            return Redirect::back()->withErrors($validator->errors())->withInput();
         }
 
         // Validált adatok lekérése, majd azok formázása, hogy az adatbázisba be tudjuk vinni
@@ -44,7 +44,33 @@ class UserController extends Controller
     }
 
     public function login(Request $request) {
-        
+        // Validálási szabályok és hibaüzenetek definiálása
+        $rules = [
+            'username' => 'required',
+            'password' => 'required',
+        ];
+        $messages = [
+            'required' => 'A(z) \':attribute\' mező nem lehet üres.'
+        ];
+
+        // Validálási hibák kiírása, ha nem helyes
+        $validator = Validator::make($request, $rules, $messages);
+        if($validator->fails()) {
+            return Redirect::back()->withErrors($validator->errors())->withInput();
+        }
+
+        // Bejelentkezés, ha az adott felhasználó létezik
+        $fields = $validator->valid();
+        if(auth()->attempt([
+            'name' => $fields['username'],
+            'password'=> $fields['password']
+        ])) {
+            $request->session()->regenerate();
+            return redirect('/');
+        }
+
+        // Vissza a loginra, ha mégse
+        return Redirect::back()->withErrors(['msg' => 'Helytelen felhasználónév vagy jelszó.'])->withInput();
     }
 
     public function logout(Request $request) {
