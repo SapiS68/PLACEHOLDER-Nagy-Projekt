@@ -2,34 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Illuminate\Validation\Validator;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
 
 class UserController extends Controller
 {
     public function register(Request $request) {
         // Validálási szabályok és hibaüzenetek definiálása
         $rules = [
-            'username' => ['required', 'min:4', 'max:16', 'regex:[a-zA-Z0-9_]+', Rule::unique('users', 'username')],
-            'email' => ['required', 'email', Rule::unique('users', 'email')],
+            'username' => ['required', 'min:4', 'max:16', 'regex:/^[a-zA-Z0-9_]+$/', 'unique:users,username'],
+            'email' => ['required', 'email', 'unique:users,email'],
             'password' => ['required', 'confirmed'],
             'password_confirmation' => ['required'],
         ];
         $messages = [
             'required' => 'A(z) \':attribute\' mező kötelezően kitöltendő.',
-            Rule::unique('users', 'email') => 'Az adott e-mail címmel már regisztráltak.',
+            'unique:users,email' => 'Az adott e-mail címmel már regisztráltak.',
             'username.min' => 'A felhasználónévnek minimum :min karakter hosszúnak kell lennie.',
             'username.max' => 'A felhasználónév maximum :max karakter hosszú lehet.',
             'confirmed' => 'A két beírt jelszó nem egyezik.',
-            Rule::unique('users', 'username') => 'Az adott felhasználónévvel már regisztráltak.',
+            'unique:users,username' => 'Az adott felhasználónévvel már regisztráltak.',
             'email' => 'A beírt e-mail cím formátuma nem megfelelő.',
+            'regex' => 'A felhasználónév csak az angol ábécé kis-és nagybetűit, számjegyeket, illetve alulvonást tartalmazhat.'
         ];
 
         // Validálási hibák kiiratása a regisztrációs ablaknál
-        $validator = Validator::make($request, $rules, $messages);
+        $validator = Validator::make($request->all(), $rules, $messages);
         if($validator->fails()) {
+            //throw new HttpResponseException(response()->json($validator->errors(), 422)); // Postman teszteléshez
             return Redirect::back()->withErrors($validator->errors())->withInput();
         }
 
