@@ -16,16 +16,23 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('register');
-});
+})->name('index');
+Route::get('/login', function() {
+    return view('login'); // később oldal létrehozása
+})->name('login');
+
+/*
+ * POST REQUEST-EK
+ */
 
 /* Regisztráció */
-Route::post('/register', [UserController::class, 'register']);
+Route::post('/register', [UserController::class, 'register'])->name('register');
 
 /* Bejelentkezés */
-Route::post('/loginaction', [UserController::class, 'login']);
+Route::post('/loginaction', [UserController::class, 'login'])->name('loginaction');
 
 /* Kijelentkezés */
-Route::post('/logout', [UserController::class, 'logout']);
+Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 /* Jelszómódosítás */
-Route::post('/modifypass', [UserController::class, 'modifyPass']);
+Route::post('/modifypass', [UserController::class, 'modifyPass'])->name('modifypass');
