@@ -58,15 +58,16 @@ class UserController extends Controller
         ];
 
         // Validálási hibák kiírása, ha nem helyes
-        $validator = Validator::make($request, $rules, $messages);
+        $validator = Validator::make($request->all(), $rules, $messages);
         if($validator->fails()) {
+            //throw new HttpResponseException(response()->json($validator->errors(), 422)); // Postman teszteléshez
             return Redirect::back()->withErrors($validator->errors())->withInput();
         }
 
         // Bejelentkezés, ha az adott felhasználó létezik
         $fields = $validator->valid();
         if(auth()->attempt([
-            'name' => $fields['username'],
+            'username' => $fields['username'],
             'password'=> $fields['password']
         ])) {
             $request->session()->regenerate();
@@ -74,6 +75,7 @@ class UserController extends Controller
         }
 
         // Vissza a loginra, ha mégse
+        //throw new HttpResponseException(response()->json(['msg' => 'Helytelen felhasználónév vagy jelszó.'], 422)); // Postman teszteléshez
         return Redirect::back()->withErrors(['msg' => 'Helytelen felhasználónév vagy jelszó.'])->withInput();
     }
 
