@@ -52,16 +52,16 @@ bármikor visszanézve átélheted a múlt pillanatait.</p>
 
                 <div class="flex justify-center">
                     <a href="/login"class=" text-slate-950 m-3 p-1 rounded bg-gradient-to-r from-red-600 to-amber-400 hover:from-red-700 hover:to-orange-500 font-semibold">Van fiókom</a>
-                    
+                </div>
+                <div class="flex-col justify-center">
+                    @foreach ($errors->all() as $error)
+                        <p class="w-full text-red-500">{{ $error }}</p>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
 
-    
-
-
-    
     @yield('content')
 </body>
 </html>
