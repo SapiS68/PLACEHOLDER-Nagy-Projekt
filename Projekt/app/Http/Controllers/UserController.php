@@ -21,13 +21,13 @@ class UserController extends Controller
         ];
         $messages = [
             'required' => 'A(z) \':attribute\' mező kötelezően kitöltendő.',
-            'unique:users,email' => 'Az adott e-mail címmel már regisztráltak.',
             'username.min' => 'A felhasználónévnek minimum :min karakter hosszúnak kell lennie.',
             'username.max' => 'A felhasználónév maximum :max karakter hosszú lehet.',
             'confirmed' => 'A két beírt jelszó nem egyezik.',
-            'unique:users,username' => 'Az adott felhasználónévvel már regisztráltak.',
-            'email' => 'A beírt e-mail cím formátuma nem megfelelő.',
-            'regex' => 'A felhasználónév csak az angol ábécé kis-és nagybetűit, számjegyeket, illetve alulvonást tartalmazhat.'
+            'email.email' => 'A beírt e-mail cím formátuma nem megfelelő.',
+            'regex' => 'A felhasználónév csak az angol ábécé kis-és nagybetűit, számjegyeket, illetve alulvonást tartalmazhat.',
+            'username' => 'Az adott felhasználónévvel már regisztráltak.',
+            'email' => 'Az adott e-mail címmel már regisztráltak.',
         ];
 
         // Validálási hibák kiiratása a regisztrációs ablaknál
