@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -36,3 +37,11 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 /* Jelszómódosítás */
 Route::post('/modifypassaction', [UserController::class, 'modifyPass'])->name('modifypassaction');
+
+/*
+ * API
+ */
+
+/* Autocomplete */
+Route::get('/api/autocomplete/{substr}', [GameController::class, 'autocomplete']);
+Route::get('/api/autocomplete/', [GameController::class, 'autocomplete']);
