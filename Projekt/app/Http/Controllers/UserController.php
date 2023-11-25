@@ -103,23 +103,23 @@ class UserController extends Controller
         
         $validator = Validator::make($request->all(), $rules, $messages);
         if($validator->fails()) {
-            throw new HttpResponseException(response()->json($validator->errors(), 422)); // Postman teszteléshez
+            //throw new HttpResponseException(response()->json($validator->errors(), 422)); // Postman teszteléshez
             return Redirect::back()->withErrors($validator->errors());
         }
 
         $msg_invalidold = ['msg' => 'A megadott régi jelszó nem egyezik az előzővel.'];
         $msg_nochange = ['msg' => 'Az új jelszó megegyezik az előzővel.'];
         if(!Hash::check($request->old_password, auth()->user()->password)){
-            throw new HttpResponseException(response()->json($msg_invalidold, 422)); // Postman teszteléshez
+            //throw new HttpResponseException(response()->json($msg_invalidold, 422)); // Postman teszteléshez
             return Redirect::back()->withErrors($msg_invalidold);
         }
         if (Hash::check($request->new_password, auth()->user()->password)) {
-            throw new HttpResponseException(response()->json($msg_nochange, 422)); // Postman teszteléshez
+            //throw new HttpResponseException(response()->json($msg_nochange, 422)); // Postman teszteléshez
             return Redirect::back()->withErrors($msg_nochange);
         }
 
         auth()->user()->password = bcrypt($request->new_password);
         auth()->user()->save();
-        throw new HttpResponseException(response()->json(['msg' => $request->user()], 422));
+        return Redirect::route("index")->withErrors(['msg' => 'Sikeres jelszómódosítás!']);
     }
 }

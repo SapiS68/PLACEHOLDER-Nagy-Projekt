@@ -35,4 +35,4 @@ Route::post('/loginaction', [UserController::class, 'login'])->name('loginaction
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 /* Jelszómódosítás */
-Route::post('/modifypass', [UserController::class, 'modifyPass'])->name('modifypass');
+Route::post('/modifypassaction', [UserController::class, 'modifyPass'])->name('modifypassaction');
