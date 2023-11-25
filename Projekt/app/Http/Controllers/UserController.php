@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
@@ -85,6 +86,40 @@ class UserController extends Controller
     }
 
     public function modifyPass(Request $request) {
+        if(!auth()->check()) {
+            throw new HttpResponseException(response()->json(['msg' => 'Ehhez a művelethez először be kell jelentkezned.'], 422));
+            return Redirect::back()->withErrors(['msg' => 'Ehhez a művelethez először be kell jelentkezned.']);
+        }
+
+        $rules = [
+            'old_password' => ['required'],
+            'new_password' => ['required', 'confirmed'],
+            'new_password_confirmation' => ['required'],
+        ];
+        $messages = [
+            'required' => 'A(z) \':attribute\' mező nem lehet üres.',
+            'confirmed' => 'A két új jelszó mezőinek tartalma nem egyezik.'
+        ];
         
+        $validator = Validator::make($request->all(), $rules, $messages);
+        if($validator->fails()) {
+            throw new HttpResponseException(response()->json($validator->errors(), 422)); // Postman teszteléshez
+            return Redirect::back()->withErrors($validator->errors());
+        }
+
+        $msg_invalidold = ['msg' => 'A megadott régi jelszó nem egyezik az előzővel.'];
+        $msg_nochange = ['msg' => 'Az új jelszó megegyezik az előzővel.'];
+        if(!Hash::check($request->old_password, auth()->user()->password)){
+            throw new HttpResponseException(response()->json($msg_invalidold, 422)); // Postman teszteléshez
+            return Redirect::back()->withErrors($msg_invalidold);
+        }
+        if (Hash::check($request->new_password, auth()->user()->password)) {
+            throw new HttpResponseException(response()->json($msg_nochange, 422)); // Postman teszteléshez
+            return Redirect::back()->withErrors($msg_nochange);
+        }
+
+        auth()->user()->password = bcrypt($request->new_password);
+        auth()->user()->save();
+        throw new HttpResponseException(response()->json(['msg' => $request->user()], 422));
     }
 }
