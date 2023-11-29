@@ -18,8 +18,8 @@
 
                     <form class="space-y-6" action="/login" method="POST">
                         @csrf
-                        <!--MEZŐK EGYEZTETÉSE!!!!!!!!! -->
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="email" type="text" placeholder="Email" /> 
+
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="username" type="text" placeholder="Felhasználónév" /> 
                         <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="password" type="password" placeholder="Jelszó" />                 
                         
                   
