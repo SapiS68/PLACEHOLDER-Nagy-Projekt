@@ -16,7 +16,7 @@
                 <div class="bg-neutral-950 p-3 rounded-lg text-gray-50">
                     <h1 class="flex justify-center text-transform: uppercase text-bold font-bold mb-1">jelentkezz be!</h1>
 
-                    <form class="space-y-6" action="/login" method="POST">
+                    <form class="space-y-6" action="/loginaction" method="POST">
                         @csrf
 
                         <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="username" type="text" placeholder="Felhasználónév" /> 

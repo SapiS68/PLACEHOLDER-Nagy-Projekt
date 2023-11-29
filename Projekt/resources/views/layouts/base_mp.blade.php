@@ -18,8 +18,9 @@
 
                     <form class="space-y-6" action="/modifypassaction" method="POST">
                         @csrf
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="password" type="password" placeholder="Jelszó" />                 
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="password_confirmation" type="password" placeholder="Jelszó ismét" />   
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="old_password" type="password" placeholder="Jelszó" />      
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="new_password" type="password" placeholder="Új jelszó" />              
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="new_password_confirmation" type="password" placeholder="Új jelszó ismét" />   
                   
                         <div class="flex justify-center">
                             <button class="flex justify-center text-slate-950 m-3 p-1 rounded bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 font-semibold">Véglegesít</button>

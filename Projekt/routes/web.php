@@ -21,6 +21,14 @@ Route::get('/', function () {
 Route::get('/login', function() {
     return view('login'); // később oldal létrehozása
 })->name('login');
+Route::get('/modifypass', function() {
+    return view('modifypass'); // később oldal létrehozása
+})->name('modifypass');
+Route::get('/game', function() {
+    return view('game'); // később oldal létrehozása
+})->name('game');
+
+
 
 /*
  * POST REQUEST-EK
