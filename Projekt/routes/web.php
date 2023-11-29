@@ -27,8 +27,9 @@ Route::get('/modifypass', function() {
 Route::get('/game', function() {
     return view('game'); // később oldal létrehozása
 })->name('game');
-
-
+Route::get('/admin', function() {
+    return view('admin'); // később oldal létrehozása
+});
 
 /*
  * POST REQUEST-EK
