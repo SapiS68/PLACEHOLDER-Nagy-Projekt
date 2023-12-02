@@ -24,3 +24,6 @@ Route::middleware('auth:api')->get('/user', function(Request $request) {
 
 Route::middleware('auth:api')->get('/autocomplete/{substr}', [GameController::class, 'autocomplete']);
 Route::middleware('auth:api')->get('/autocomplete', [GameController::class, 'autocomplete']);
+
+Route::middleware('auth:api')->get('/guess', [GameController::class, 'get_attempt_info']);
+Route::middleware('auth:api')->post('/guess', [GameController::class, 'guess']);

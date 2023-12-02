@@ -18,4 +18,16 @@ class Attempt extends Model
         'attempt_time',
         'finished'
     ];
+    protected $dates = [
+        'date',
+        'created_at',
+        'updated_at'
+    ];
+    protected $casts = [
+        'date' => 'date',
+        'attempt_time' => 'datetime',
+        'finished' => 'boolean',
+        'created_at' => 'timestamp',
+        'updated_at' => 'timestamp'
+    ];
 }

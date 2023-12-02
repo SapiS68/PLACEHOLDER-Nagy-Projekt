@@ -22,4 +22,14 @@ class Question extends Model
         'missed',
         'total_time'
     ];
+    protected $dates = [
+        'date',
+        'created_at',
+        'updated_at'
+    ];
+    protected $casts = [
+        'date' => 'date',
+        'created_at' => 'timestamp',
+        'updated_at' => 'timestamp'
+    ];
 }
