@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Hash;
@@ -43,6 +44,7 @@ class UserController extends Controller
         $fields['password'] = bcrypt($fields['password']);
         unset($fields['password_confirmation']);
         $fields['role_id'] = 0; // Alap felhasználó jogosultsági szint ID-ja
+        $fields['api_token'] = Str::random(60);
 
         User::create($fields);
         return Redirect::route("login")->withErrors(['msg' => 'Sikeres regisztráció!']);

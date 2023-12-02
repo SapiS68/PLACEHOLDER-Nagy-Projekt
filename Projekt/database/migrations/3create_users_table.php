@@ -15,6 +15,13 @@ return new class extends Migration
             $table->string('username')->primary();
             $table->integer('role_id');
             $table->string('password');
+
+            // copy-paste from https://laravel.com/docs/5.8/api-authentication
+            $table->string('api_token', 80)
+                        ->unique()
+                        ->nullable()
+                        ->default(null);
+                        
             $table->string('email')->unique();
             $table->timestamps();
 
