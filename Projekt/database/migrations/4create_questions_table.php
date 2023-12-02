@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->datetime('date')->primary();
+            $table->date('date')->primary();
             $table->string('solution_id');
             $table->integer('first_attempt');
             $table->integer('second_attempt');
