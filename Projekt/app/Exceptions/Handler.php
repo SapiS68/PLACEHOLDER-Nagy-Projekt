@@ -2,8 +2,9 @@
 
 namespace App\Exceptions;
 
-use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
+use Illuminate\Auth\AuthenticationException;
+use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
@@ -26,5 +27,16 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    // átírva ebből: https://stackoverflow.com/questions/58115803/is-there-any-way-to-change-response-of-authapi-a-laravel-api-token
+    public function render($request, Throwable $exception)
+    {
+        if ($exception instanceof AuthenticationException) {
+            if ($request->is('api/*')) {
+                return response()->json(['error' => 'API token is not given'], 401);
+            }
+        }
+        return parent::render($request, $exception);
     }
 }
