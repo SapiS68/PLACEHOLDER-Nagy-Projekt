@@ -21,3 +21,5 @@ Route::middleware('auth:api')->get('/user', function(Request $request) {
     return $request->user();
 });
 
+Route::get('/autocomplete/{substr}', [GameController::class, 'autocomplete']);
+Route::get('/autocomplete', [GameController::class, 'autocomplete']);
