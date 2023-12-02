@@ -15,18 +15,19 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function() {
+    if(auth()->user()) {
+        return view('game');
+    }
     return view('register');
 })->name('index');
+
 Route::get('/login', function() {
     return view('login'); // később oldal létrehozása
 })->name('login');
 Route::get('/modifypass', function() {
     return view('modifypass'); // később oldal létrehozása
 })->name('modifypass');
-Route::get('/game', function() {
-    return view('game'); // később oldal létrehozása
-})->name('game');
 Route::get('/admin', function() {
     return view('admin'); // később oldal létrehozása
 });
@@ -46,11 +47,3 @@ Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 /* Jelszómódosítás */
 Route::post('/modifypassaction', [UserController::class, 'modifyPass'])->name('modifypassaction');
-
-/*
- * API
- */
-
-/* Autocomplete */
-Route::get('/api/autocomplete/{substr}', [GameController::class, 'autocomplete']);
-Route::get('/api/autocomplete/', [GameController::class, 'autocomplete']);
