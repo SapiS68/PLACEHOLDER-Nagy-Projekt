@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +22,5 @@ Route::middleware('auth:api')->get('/user', function(Request $request) {
     return $request->user();
 });
 
-Route::get('/autocomplete/{substr}', [GameController::class, 'autocomplete']);
-Route::get('/autocomplete', [GameController::class, 'autocomplete']);
+Route::middleware('auth:api')->get('/autocomplete/{substr}', [GameController::class, 'autocomplete']);
+Route::middleware('auth:api')->get('/autocomplete', [GameController::class, 'autocomplete']);
