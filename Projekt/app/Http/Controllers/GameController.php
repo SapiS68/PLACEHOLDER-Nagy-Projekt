@@ -47,7 +47,7 @@ class GameController extends Controller
             ->where('questions.date', $id)
             ->first();
         
-        $success = ($answer->solution_name == $request['guess']);
+        $success = (strtolower($answer->solution_name) == strtolower($request['guess']));
         $finished = ($success || $attempt->attempt_number+1 >= 5);
         
         if($finished && !$success) {
