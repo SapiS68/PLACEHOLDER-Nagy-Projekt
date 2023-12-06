@@ -124,4 +124,11 @@ class UserController extends Controller
         auth()->user()->save();
         return Redirect::route("index")->withErrors(['msg' => 'Sikeres jelszómódosítás!']);
     }
+
+    public function makeAdmin($username)
+    {
+        $user = User::find($username);
+        if($user == null) { return null; }
+        if($user -> role_id == 0) { $user -> role_id = 1; $user -> save(); }
+    }
 }
