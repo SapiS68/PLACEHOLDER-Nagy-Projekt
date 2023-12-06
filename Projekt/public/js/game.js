@@ -178,7 +178,7 @@ function nextpic() {
     pic_ind = (pic_ind + 1) % pics.length;
     clue_image.src = pics[pic_ind];
 }
-function prevpick() {
+function prevpic() {
     pic_ind = (pics.length + (pic_ind - 1)) % pics.length;
     clue_image.src = pics[pic_ind];
 }
