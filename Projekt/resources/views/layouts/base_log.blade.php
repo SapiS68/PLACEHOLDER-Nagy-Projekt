@@ -30,7 +30,7 @@
                     </form>
 
                     <div class="flex justify-center">
-                        <a href="/login"class=" text-slate-950 m-3 p-1 rounded bg-gradient-to-r from-red-600 to-amber-400 hover:from-red-700 hover:to-orange-500 font-semibold">Nincs fiókom</a>
+                        <a href="/" class=" text-slate-950 m-3 p-1 rounded bg-gradient-to-r from-red-600 to-amber-400 hover:from-red-700 hover:to-orange-500 font-semibold">Nincs fiókom</a>
                     </div>
                    <!-- <div class="flex-col justify-center">
                         @foreach ($errors->all() as $error)
