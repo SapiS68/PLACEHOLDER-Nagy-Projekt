@@ -19,8 +19,8 @@
                             
                         </div> 
                         <div class="flex justify-center">  
-                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-indigo-700 to-gray-400 hover:from-indigo-800 hover:to-gray-600 font-semibold">Előző</button>
-                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-indigo-700 to-gray-400 hover:from-indigo-800 hover:to-gray-600 font-semibold">Következő</button>
+                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-indigo-50 to-gray-50 hover:from-indigo-50 hover:to-gray-50 font-semibold">Előző</button>
+                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-indigo-50 to-gray-50 hover:from-indigo-50 hover:to-gray-50 font-semibold">Következő</button>
 
                         </div> 
                         <div class="flex justify-center"> 
@@ -36,12 +36,16 @@
             <div class="items-center justify-center">
                 <div class="bg-neutral-950 p-3 rounded-lg text-gray-50">
                           <div class="flex justify-center"> 
-                            <p lass="flex justify-center">A kép egy játékból származik. A segítségével írd be az ötletedet.</p>
-                        </div>                 
+                            <p class="flex justify-center">A kép egy játékból származik. A segítségével írd be az ötletedet.</p>
+                        </div>     
+                                        <!--TIMER -->
+                        <div class="flex justify-center"> 
+                            <p class="p-12 font-extrabold text-slate-50 text-4xl flex justify-center">00:00</p>
+                        </div>  
 
                         <div class="flex justify-center"> 
                             <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="text" placeholder="Ötleted helye." /> 
-                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-indigo-700 to-gray-400 hover:from-indigo-800 hover:to-gray-600 font-semibold">Beküldés</button>
+                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-green-50 to-gray-50 hover:from-green-50 hover:to-gray-50 font-semibold">Beküldés</button>
 
                         </div> 
                         <div class="justify-center"> 
