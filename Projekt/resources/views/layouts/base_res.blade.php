@@ -35,22 +35,55 @@
                         </div>     
                                         <!--TIMER -->
                         <div class="flex justify-center"> 
-                            <p class=" font-extrabold text-slate-50 text-4xl flex justify-center">00:00</p>
+                            <p class=" font-extrabold text-slate-50 text-xl flex justify-center">00:00</p>
                         </div>  
                         <div class="flex justify-center"> 
                             <p class="flex justify-center">Átlagos idő:</p>
                         </div>     
                                         <!--TIMER -->
                         <div class="flex justify-center"> 
-                            <p class=" font-extrabold text-slate-50 text-4xl flex justify-center">00:00</p>
+                            <p class=" font-extrabold text-slate-50 text-xl flex justify-center">00:00</p>
                         </div>  
 
+
+
+                        <div class="flex justify-center "> 
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">Próbálkozások statisztikája:</p>
+                        </div> 
+                        <div class="p-1 flex"> 
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">1:</p>
+                            <p class="w-1/3 rounded bg-gradient-to-r from-yellow-500 to-amber-600 flex justify-center font-bold text-black text-sm">1 </p>
+
+                        </div>
+                        <div class="p-1 flex "> 
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">2:</p>
+                            <p class="w-1/2 rounded bg-gradient-to-r from-yellow-500 to-amber-600 flex justify-center font-bold text-black text-sm">2 </p>
+
+                        </div>
+                        <div class="p-1 flex "> 
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">3:</p>
+                            <p class="w-1/4 rounded bg-gradient-to-r from-yellow-500 to-amber-600 flex justify-center font-bold text-black text-sm">2 </p>
+
+                        </div>                        <div class="p-1 flex"> 
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">4:</p>
+                            <p class="w-1/5 rounded bg-gradient-to-r from-yellow-500 to-amber-600 flex justify-center font-bold text-black text-sm">2 </p>
+
+                        </div>
+                        <div class="p-1 flex "> 
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">5:</p>
+                            <p class="w-1/4 rounded bg-gradient-to-r from-yellow-500 to-amber-600 flex justify-center font-bold text-black text-sm">2 </p>
+
+                        </div>                        <div class="p-1 flex"> 
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">x:</p>
+                            <p class="w-1/5 rounded bg-gradient-to-r from-yellow-500 to-amber-600 flex justify-center font-bold text-black text-sm">2 </p>
+
+                        </div>
 
 
 
                                         
                         <div class="flex justify-center">
-                            <img class="w-1/3 h-1/3 rounded-lg"src="https://i.imgur.com/VDSFO47.png" >
+                            <img class="w-1/5 h-1/5 rounded-lg"src="https://i.imgur.com/VDSFO47.png" >
                         </div>  
 
                         <div class="flex justify-center">  
