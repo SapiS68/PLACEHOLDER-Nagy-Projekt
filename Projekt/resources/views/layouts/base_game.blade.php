@@ -53,7 +53,7 @@
 
                         <div class="flex justify-center"> 
                             <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="text" placeholder="Ötleted helye." id="attempt_input"/> 
-                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-green-50 to-gray-50 hover:from-green-50 hover:to-gray-50 font-semibold">Beküldés</button>
+                            <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-green-50 to-gray-50 hover:from-green-50 hover:to-gray-50 font-semibold" onclick="send()">Beküldés</button>
 
                         </div> 
                         <div class="justify-center" id="attempts_made"> 
