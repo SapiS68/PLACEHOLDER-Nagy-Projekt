@@ -9,7 +9,7 @@
 
 
     <div class="flex justify-center">
-        <div class="w-flex h-1/2 p-10 ">
+        <div class="w-1/4 h-1/2 p-10 ">
         
             <div class="items-center justify-center">
                 <div class="bg-neutral-950 p-3 rounded-lg text-gray-50">
@@ -24,25 +24,19 @@
             </div>
         </div>
 
-        <div class="w-flex h-flex p-10 ">
+        <div class="w-1/4 h-flex p-10 ">
         
             <div class="items-center justify-center">
                 <div class="bg-neutral-950 p-2 rounded-lg text-gray-50">
                         <h1 class="flex justify-center	text-transform: uppercase text-bold font-bold mb-1">Statisztikád:</h1>
 
                         <div class="flex justify-center"> 
-                            <p class="flex justify-center">Időd:</p>
-                        </div>     
-                                        <!--TIMER -->
-                        <div class="flex justify-center"> 
-                            <p class=" font-extrabold text-slate-50 text-xl flex justify-center">00:00</p>
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">Időd:</p>
+                            <p class=" font-extrabold text-slate-50 text-2xl flex justify-center">00:00</p>
                         </div>  
                         <div class="flex justify-center"> 
-                            <p class="flex justify-center">Átlagos idő:</p>
-                        </div>     
-                                        <!--TIMER -->
-                        <div class="flex justify-center"> 
-                            <p class=" font-extrabold text-slate-50 text-xl flex justify-center">00:00</p>
+                            <p class=" font-extrabold text-slate-50 text-l flex justify-center">Átlagos idő:</p>
+                            <p class=" font-extrabold text-slate-50 text-2xl flex justify-center">00:00</p>
                         </div>  
 
 
@@ -83,7 +77,7 @@
 
                                         
                         <div class="flex justify-center">
-                            <img class="w-1/5 h-1/5 rounded-lg"src="https://i.imgur.com/VDSFO47.png" >
+                            <img class="w-flex h-flex rounded-lg"src="https://i.imgur.com/VDSFO47.png" >
                         </div>  
 
                         <div class="flex justify-center">  
