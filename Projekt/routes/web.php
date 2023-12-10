@@ -41,6 +41,7 @@ Route::get('/', function() {
     }
     return view('register');
 })->name('index');
+Route::get('/view/{rawdate}', [StatsController::class, 'viewStatsForDate']);
 
 Route::get('/login', function() {
     return view('login'); // később oldal létrehozása
@@ -50,6 +51,9 @@ Route::get('/modifypass', function() {
 })->name('modifypass');
 Route::get('/admin', function() {
     return view('admin'); // később oldal létrehozása
+});
+Route::get('/archive', function() {
+    return view('archive');
 });
 
 Route::get('/question', function() {return view('question');}) -> name('question');
@@ -79,4 +83,4 @@ Route::put('/editquestion', [PromptController::class, 'editquestion']) -> name('
 
 
 //Kérdés törlése
-Route::delete('˛deletequestion', [PromptController::class, 'deletequestion']) ->name('deletequestion');
+Route::delete('/deletequestion', [PromptController::class, 'deletequestion']) ->name('deletequestion');

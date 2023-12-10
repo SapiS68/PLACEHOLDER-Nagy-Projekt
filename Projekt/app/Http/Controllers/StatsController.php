@@ -41,6 +41,7 @@ class StatsController extends Controller
             'fourth_attempt',
             'fifth_attempt',
             'missed');
+        $stats['attempts_total'] = max($stats['attempts_total'], 1);
         
         $clue_images = "";
         for ($i=0; $i < 5; $i++) { 
@@ -65,6 +66,16 @@ class StatsController extends Controller
 
 
         return View::make('game_results')->with('stats', $stats);
+    }
+    public function viewStatsForDate($rawdate) {
+        //return $rawdate;
+        $date = Carbon::createFromFormat("Y-m-d", $rawdate)->startOfDay();
+        
+        if(!Question::find($date) || $date >= Carbon::today()) {
+            return view('welcome');// Később: oldal létrehozása, amely kiírja hogy nincs a mai nap játék
+        }
+
+        return $this->getGameStatistics($date);
     }
 
     private function sum($data, ...$keys) {
