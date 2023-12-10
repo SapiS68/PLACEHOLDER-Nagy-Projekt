@@ -26,7 +26,7 @@ Route::get('/', function() {
     if(auth()->user()) {
         $date = Carbon::today();
         if(!Question::find($date)) {
-            return view('welcome');// Később: oldal létrehozása, amely kiírja hogy nincs a mai nap játék
+            return view('no_game');// Később: oldal létrehozása, amely kiírja hogy nincs a mai nap játék
         }
 
         $attempt =
@@ -55,8 +55,10 @@ Route::get('/admin', function() {
 Route::get('/archive', function() {
     return view('archive');
 });
-
-Route::get('/question', function() {return view('question');}) -> name('question');
+Route::get('/user_stat', function() {
+    return view('user_stat');
+});
+Route::get('/question', function() {return view('add_game');}) -> name('question');
 
 /*
  * POST REQUEST-EK
