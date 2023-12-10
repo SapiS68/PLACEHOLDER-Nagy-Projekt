@@ -49,7 +49,7 @@
 
                 <!--new quiz -->
 
-
+                @if(auth()->user()->role_id > 0)
                 <a href="/question">
 
                     <button class="text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-red-500 to-red-600 hover:from-indigo-50 hover:to-gray-50 font-semibold">
@@ -59,6 +59,7 @@
                     </svg>
                     </button>
                     </a> 
+                    @endif
                 <!--logout -->
                 <a href="/logout">
                 <button class="float-right text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-yellow-500 to-amber-600 hover:from-indigo-50 hover:to-gray-50 font-semibold">
@@ -78,6 +79,7 @@
                     </button>  
                     </a>    
                 <!--USER -->
+                @if(auth()->user()->role_id > 0)
                 <a href="/admin">
 
                 <button class="float-right text-slate-950 m-1 p-1 rounded bg-gradient-to-r from-red-500 to-red-600 hover:from-indigo-50 hover:to-gray-50 font-semibold">
@@ -86,6 +88,7 @@
                     </svg>
                     </button>
                 </a>
+                @endif
                 
  
                
