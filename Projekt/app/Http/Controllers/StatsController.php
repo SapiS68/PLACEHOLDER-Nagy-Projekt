@@ -72,7 +72,7 @@ class StatsController extends Controller
         $date = Carbon::createFromFormat("Y-m-d", $rawdate)->startOfDay();
         
         if(!Question::find($date) || $date >= Carbon::today()) {
-            return view('welcome');// Később: oldal létrehozása, amely kiírja hogy nincs a mai nap játék
+            return view('no_game');
         }
 
         return $this->getGameStatistics($date);

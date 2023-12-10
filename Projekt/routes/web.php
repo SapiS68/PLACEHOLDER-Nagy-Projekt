@@ -26,7 +26,7 @@ Route::get('/', function() {
     if(auth()->user()) {
         $date = Carbon::today();
         if(!Question::find($date)) {
-            return view('no_game');// Később: oldal létrehozása, amely kiírja hogy nincs a mai nap játék
+            return view('no_game');
         }
 
         $attempt =
