@@ -4,9 +4,11 @@ use Carbon\Carbon;
 use App\Models\Attempt;
 use App\Models\Question;
 use Laravel\Prompts\Prompt;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\StatsController;
 use App\Http\Controllers\PromptController;
 
 /*
@@ -32,7 +34,7 @@ Route::get('/', function() {
             ->where('username','=', auth()->user()['username'])
             ->first();
         if($attempt && $attempt['finished']) {
-            return view('game_results');
+            return (new StatsController)->getGameStatistics();
         }
         
         return view('game');
