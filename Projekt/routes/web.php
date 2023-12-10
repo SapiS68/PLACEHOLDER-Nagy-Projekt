@@ -1,10 +1,13 @@
 <?php
 
+use Carbon\Carbon;
+use App\Models\Attempt;
+use App\Models\Question;
+use Laravel\Prompts\Prompt;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
-use App\Http\Controllers\PromptController;
 use App\Http\Controllers\UserController;
-use Laravel\Prompts\Prompt;
+use App\Http\Controllers\PromptController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +22,19 @@ use Laravel\Prompts\Prompt;
 
 Route::get('/', function() {
     if(auth()->user()) {
+        $date = Carbon::today();
+        if(!Question::find($date)) {
+            return view('welcome');// Később: oldal létrehozása, amely kiírja hogy nincs a mai nap játék
+        }
+
+        $attempt =
+            Attempt::where('date','=',$date)
+            ->where('username','=', auth()->user()['username'])
+            ->first();
+        if($attempt && $attempt['finished']) {
+            return view('game_results');
+        }
+        
         return view('game');
     }
     return view('register');
@@ -34,7 +50,7 @@ Route::get('/admin', function() {
     return view('admin'); // később oldal létrehozása
 });
 
-Route::get('/question', function() {return view('question');}) -> name('question    ');
+Route::get('/question', function() {return view('question');}) -> name('question');
 
 /*
  * POST REQUEST-EK

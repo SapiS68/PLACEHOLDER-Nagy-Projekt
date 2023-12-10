@@ -52,7 +52,7 @@ async function init() {
 
 async function load_data() {
     if(auth_token == null) {
-        alert('Nincs felhasználó token megadva');
+        window.location += "login";
         return;
     }
 
@@ -70,12 +70,11 @@ async function load_data() {
     let data = await fetch('http://' + window.location.host + '/api/guess?' + new URLSearchParams({api_token: auth_token})).then((res) => res.json());
 
     if(data.nogame != null) {
-        alert('Nincs játék a mai napon, térjen át egy üres oldalra, üzenettel');
         return;
     }
     if(data.finished) {
-        alert('A mai játék már be lett fejezve, később ide refresh/redirect és hozzátartozó session adat törlése');
         save_attempts([]);
+        location.reload();
         return;
     }
 
@@ -105,7 +104,7 @@ async function start_timer() {
 }
 async function send() {
     if(auth_token == null) {
-        alert('Nincs felhasználó token megadva');
+        window.location += "login";
         return;
     }
 
