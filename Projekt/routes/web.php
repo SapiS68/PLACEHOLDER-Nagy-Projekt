@@ -59,6 +59,7 @@ Route::get('/user_stat', function() {
     return view('user_stat');
 });
 Route::get('/question', function() {return view('add_game');}) -> name('question');
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 /*
  * POST REQUEST-EK
@@ -69,9 +70,6 @@ Route::post('/register', [UserController::class, 'register'])->name('register');
 
 /* Bejelentkezés */
 Route::post('/loginaction', [UserController::class, 'login'])->name('loginaction');
-
-/* Kijelentkezés */
-Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
 /* Jelszómódosítás */
 Route::post('/modifypassaction', [UserController::class, 'modifyPass'])->name('modifypassaction');
