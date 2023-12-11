@@ -114,6 +114,38 @@ class GameController extends Controller
         ];
         return response()->json($response, 200);
     }
+
+    public function get_game_name(Request $request) {
+        $user = auth('api')->user();
+        if($user['role_id'] == 0) {
+            return response()->json(["error" => "Access denied"], 401);
+        }
+
+        if(!isset($request["date"])) {
+            return response()->json(["error" => "'date' is not given"], 400);
+        }
+
+        $date = null;
+        try {
+            $date = Carbon::createFromFormat("m/d/Y", $request['date'])->startOfDay();
+        } catch (\Throwable $th) {
+            return response()->json(["error" => "Date is in invalid format"]);
+        }
+
+        $question = Question::find($date);
+
+        if(!$question) {
+            return response()->json(["nogame" => true]);
+        }
+
+        $json = ["nogame" => false];
+        $json["game_name"] = DB::table('solutions')
+            ->select("solution_name")
+            ->where('solution_id', $question['solution_id'])
+            ->first()->solution_name;
+        
+        return response()->json($json, 200);
+    }
     
     private function __get_or_create_attempt($id, $user) {
         $attempt =
