@@ -8,9 +8,74 @@ use App\Models\Question;
 use Carbon\CarbonInterval;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class GameController extends Controller
 {
+    public function add_or_modify_question(Request $request) {
+        $rules = [
+            'name' => ['required'],
+            'date' => ['required', 'date']
+        ];
+        $rules_when_creating = [];
+        for ($i=0; $i < 5; $i++) { 
+            //$rules['clue'.($i+1)] = ['file', 'image'];
+            $rules_when_creating['clue'.($i+1)] = ['required', 'file', 'image'];
+        }
+        $messages = [
+            'required' => "A(z) ':attribute' mező kötelezően kitöltendő",
+            'date' => "A(z) ':attribute' mezőnek dátumnak kell lennie",
+        ];
+        $messages_when_creating = [
+            'required' => "A(z) ':attribute' mező kötelezően kitöltendő új kérdőív feltöltésénél",
+            'file' => "A(z) ':attribute' mezőnek fájlnak kell lennie",
+            'image' => "A(z) ':attribute' mezőnek képnek kell lennie",
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+        if($validator->fails()) {
+            return Redirect::back()->withErrors($validator->errors());
+        }
+
+        $date = Carbon::createFromFormat('Y-m-d', $request['date'])->startOfDay();
+        if($date <= Carbon::today()) {
+            return Redirect::back()->withErrors(['Csak a mai dátum után lehet kérdőívet hozzáadni az adatbázishoz']);
+        }
+
+        $question = Question::find($date);
+        if($question == null) {
+            $validator = Validator::make($request->all(), $rules_when_creating, $messages_when_creating);
+            if($validator->fails()) {
+                return Redirect::back()->withErrors(['Új kérdőív létrehozásánál kötelező minden képhez fájlt feltölteni.']);
+            }
+        }
+
+        $solution = DB::table('solutions')
+            ->select('solution_id')
+            ->whereRaw("LOWER(solution_name) = ?", [strtolower($request['name'])])
+            ->first();
+        if($solution == null) {
+            return Redirect::back()->withErrors(['A megadott játéknév nem létezik']);
+        }
+        
+        for ($i=0; $i < 5; $i++) { 
+            $file = $request->file('clue'.($i+1));
+            if($file == null) {
+                continue;
+            }
+
+            $filename = md5($date->toDateString() . '-' . ($i+1));
+            $file->move(public_path("images/questions"), "$filename.webp");
+        }
+        Question::updateOrCreate([
+            'date' => $date,
+            'solution_id' => $solution->solution_id
+        ]);
+
+        return Redirect::back()->withErrors(["Sikeres " . ($question == null ? "hozzáadás" : "módosítás") . "!"]);
+    }
+
     public function autocomplete(string $substr = '') {
         if(strlen($substr) < 3) {
             return response()->json([], 200);
@@ -140,7 +205,7 @@ class GameController extends Controller
 
         $date = null;
         try {
-            $date = Carbon::createFromFormat("m/d/Y", $request['date'])->startOfDay();
+            $date = Carbon::createFromFormat("Y-m-d", $request['date'])->startOfDay();
         } catch (\Throwable $th) {
             return response()->json(["error" => "Date is in invalid format"]);
         }

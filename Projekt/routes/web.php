@@ -75,12 +75,12 @@ Route::post('/loginaction', [UserController::class, 'login'])->name('loginaction
 Route::post('/modifypassaction', [UserController::class, 'modifyPass'])->name('modifypassaction');
 
 //Új kérdés hozzáadása
-Route::post('/addquestion', [PromptController::class, 'addquestion']) -> name('addquestion');
+Route::post('/questionmodify', [GameController::class, 'add_or_modify_question']) -> name('questionmodify');
 
 
 //Kérdés szerkesztése
-Route::put('/editquestion', [PromptController::class, 'editquestion']) -> name('editquestion');
+//Route::put('/editquestion', [PromptController::class, 'editquestion']) -> name('editquestion');
 
 
 //Kérdés törlése
-Route::delete('/deletequestion', [PromptController::class, 'deletequestion']) ->name('deletequestion');
+//Route::delete('/deletequestion', [PromptController::class, 'deletequestion']) ->name('deletequestion');

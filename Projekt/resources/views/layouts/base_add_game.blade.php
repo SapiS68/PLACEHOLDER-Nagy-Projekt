@@ -16,23 +16,23 @@
                 <div class=" bg-neutral-950 p-3 rounded-lg text-gray-50">
                     <h1 class="flex justify-center text-transform: uppercase text-bold font-bold mb-1">kérdőív hozzáadása:</h1>
 
-                    <form class="" action="" method="POST">
+                    <form class="" action="/questionmodify" method="POST" enctype="multipart/form-data">
                         @csrf
                         <p class="flex justify-center text-sm text-red-50">Játék neve, dátum </p>
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name=""  placeholder="Játék neve" />                 
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="name"  placeholder="Játék neve" />                 
 
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="date"/>  
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="date" type="date"/>  
 
                         <p class="flex justify-center text-sm text-red-50">1. kép </p>
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="file" /> 
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="clue1" type="file" /> 
                         <p class="flex justify-center text-sm text-red-50">2. kép </p>
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="file"  /> 
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="clue2" type="file"  /> 
                         <p class="flex justify-center text-sm text-red-50">3. kép </p>
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="file"  /> 
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="clue3" type="file"  /> 
                         <p class="flex justify-center text-sm text-red-50">4. kép </p>
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="file" /> 
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="clue4" type="file" /> 
                         <p class="flex justify-center text-sm text-red-50">5. kép </p>
-                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="" type="file"  /> 
+                        <input  class=" bg-gradient-to-r from-stone-700 to-neutral-500 p-1 rounded-lg text-zinc-50 placeholder:text-zinc-50" name="clue5" type="file"  /> 
 
                         <div class="flex justify-center">
                             <button class="flex justify-center text-slate-950 m-3 p-1 rounded bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 font-semibold">Hozzáadás</button>
