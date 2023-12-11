@@ -81,7 +81,20 @@ class GameController extends Controller
             }
             $question->save();
         }
-        $attempt->save();
+        //$attempt->save();
+        $attempt_time = $attempt['attempt_time']->toTimeString();
+
+        $attempt = $attempt->toArray();
+        unset($attempt['date']);
+        unset($attempt['username']);
+        $attempt['attempt_time'] = $attempt_time;
+        unset($attempt['created_at']);
+        $attempt['updated_at'] = Carbon::now()->toDateTimeString();
+
+        DB::table('attempts')
+            ->where('date','=',$id)
+            ->where('username','=',$user['username'])
+            ->update($attempt);
 
         return response()->json(['message' => 'Success!'], 200);
     }
