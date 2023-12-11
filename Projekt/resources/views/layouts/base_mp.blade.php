@@ -29,11 +29,11 @@
                     </form>
 
 
-                   <!-- <div class="flex-col justify-center">
+                    <div class="flex-col justify-center">
                         @foreach ($errors->all() as $error)
                             <p class="w-full text-red-500">{{ $error }}</p>
                         @endforeach
-                    </div> HIBA KEZELÉS IDE-->
+                    </div> 
                 </div>
             </div>
         </div>
