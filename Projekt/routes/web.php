@@ -77,6 +77,8 @@ Route::post('/modifypassaction', [UserController::class, 'modifyPass'])->name('m
 //Új kérdés hozzáadása
 Route::post('/questionmodify', [GameController::class, 'add_or_modify_question']) -> name('questionmodify');
 
+//Új játék hozzáadása
+Route::post('/addgame', [GameController::class, 'add_solution']) -> name('addgame');
 
 //Kérdés szerkesztése
 //Route::put('/editquestion', [PromptController::class, 'editquestion']) -> name('editquestion');

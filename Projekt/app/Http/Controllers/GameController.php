@@ -13,6 +13,44 @@ use Illuminate\Support\Facades\Validator;
 
 class GameController extends Controller
 {
+    public function add_solution(Request $request)
+    {
+        $rules = [
+            'name' => ['required'],
+            'cover' => ['required', 'file', 'image']
+        ];
+
+        $messages = [
+            'required' => "A(z) ':attribute' mező kötelezően kitöltendő",
+            'file' => "A(z) ':attribute' mezőnek fájlnak kell lennie",
+            'image' => "A(z) ':attribute' mezőnek képnek kell lennie",
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+        if($validator->fails()) {
+            return Redirect::back()->withErrors($validator->errors());
+        }
+
+        $solution = DB::table('solutions')
+            ->select('solution_id')
+            ->whereRaw("LOWER(solution_name) = ?", [strtolower($request['name'])])
+            ->first();
+        if($solution != null) {
+            return Redirect::back()->withErrors(['A megadott játék már létezik']);
+        }
+
+        $id = '';
+        foreach (explode(' ', $request['name']) as $value) {
+            $id.= substr($value, 0, 3);
+        }
+
+        $file = $request->file('cover');
+        $file -> move(public_path('images/solutions'), md5($id).'.webp');
+        
+        DB::insert('INSERT INTO solutions (solution_name, solution_id) VALUES (?, ?)', [$request['name'], $id]);
+        return Redirect::back()->withErrors(["Sikeres hozzáadás!"]);
+    }
+
     public function add_or_modify_question(Request $request) {
         $rules = [
             'name' => ['required'],
@@ -247,4 +285,6 @@ class GameController extends Controller
 
         return $attempt;
     }
+
+
 }
