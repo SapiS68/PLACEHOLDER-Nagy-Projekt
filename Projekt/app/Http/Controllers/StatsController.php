@@ -78,6 +78,48 @@ class StatsController extends Controller
         return $this->getGameStatistics($date);
     }
 
+    public function getUserStatistics()
+    {
+
+        $attempt_count = [];
+        $attempt_total = 0;
+        $attempt_sum = 0;
+        $i = 0;
+        $groups = [-1,1,2,3,4,5];
+        foreach ($groups as $group) {
+            $value = DB::table('attempts')
+                -> select(DB::raw('COUNT(1) AS count'))
+                -> where("username", "=", auth()->user()->username)
+                -> where("attempt_number", "=", $group)
+                -> where("finished", "=", 1)
+                -> value('count');
+
+            array_push($attempt_count, (int)$value);
+            $attempt_total += (int)$value;
+            $attempt_sum += $i * (int)$value;
+            $i++;
+        }
+
+        $attempt_won = $attempt_total - $attempt_count[0];
+        $attempt_avg = round($attempt_sum / max(1, $attempt_won), 2);
+
+        $time_secs_total = DB::table('attempts')
+            -> select(DB::raw('SUM(time_to_sec(attempt_time)) AS total_time'))
+            -> where('username', '=', auth() -> user() -> username)
+            -> where("finished", "=", 1)
+            -> value('total_time');
+        
+        $stats = [
+            'attempts' => $attempt_count,
+            'attempts_total' => $attempt_total,
+            'attempts_won' => $attempt_won,
+            'attempts_avg' => $attempt_avg,
+            'time_avg' => $this -> to_readable_time($time_secs_total / max(1,$attempt_total))
+        ];
+
+        return View::make('user_stat')->with('stats', $stats);
+    }
+
     private function sum($data, ...$keys) {
         $sum = 0;
         foreach ($keys as $key) {

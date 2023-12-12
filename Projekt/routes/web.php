@@ -56,7 +56,7 @@ Route::get('/archive', function() {
     return view('archive');
 });
 Route::get('/user_stat', function() {
-    return view('user_stat');
+    return (new StatsController)->getUserStatistics();
 });
 Route::get('/question', function() {return view('add_game');}) -> name('question');
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
