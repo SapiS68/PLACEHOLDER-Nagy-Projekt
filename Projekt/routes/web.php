@@ -83,6 +83,8 @@ Route::post('/addgame', [GameController::class, 'add_solution']) -> name('addgam
 //Kérdés szerkesztése
 //Route::put('/editquestion', [PromptController::class, 'editquestion']) -> name('editquestion');
 
+Route::post('/modifyprivileges', [UserController::class, 'modifyAdmin']);
+
 
 //Kérdés törlése
 //Route::delete('/deletequestion', [PromptController::class, 'deletequestion']) ->name('deletequestion');

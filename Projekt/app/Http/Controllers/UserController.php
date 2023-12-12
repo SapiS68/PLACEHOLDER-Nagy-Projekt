@@ -125,10 +125,27 @@ class UserController extends Controller
         return Redirect::route("index")->withErrors(['msg' => 'Sikeres jelszómódosítás!']);
     }
 
+    public function modifyAdmin(Request $request)
+    {
+        if($request['remove']) {return $this->removeAdmin($request['username']);}
+        return $this->makeAdmin($request['username']);
+    }
     public function makeAdmin($username)
     {
+        if(!(auth()->user()) || auth()->user()->role_id==0) {return Redirect::back()->withErrors(['Hozzáférés megtagadva']);}
         $user = User::find($username);
-        if($user == null) { return null; }
-        if($user -> role_id == 0) { $user -> role_id = 1; $user -> save(); }
+        if($user == null) { return Redirect::back()->withErrors(['Nincs ilyen felhasználó']); }
+        if($user -> role_id == 0) { $user -> role_id = 1; $user -> save(); return Redirect::back()->withErrors(['Sikeres hozzáadás!']); }
+        return Redirect::back()->withErrors(['Felhasználó már admin.']);
+    }
+    public function removeAdmin($username)
+    {
+        if(!(auth()->user()) || auth()->user()->role_id==0) {return Redirect::back()->withErrors(['Hozzáférés megtagadva']);}
+        $user = User::find($username);
+        if($user == null) { return Redirect::back()->withErrors(['Nincs ilyen felhasználó']); }
+        if($user == auth()->user()) { return Redirect::back()->withErrors(['Nem lehet a saját jogaidat elvenni']); }
+        if($user -> role_id == 2) { return Redirect::back()->withErrors(['Owner jogai nem elvehető']); }
+        if($user -> role_id == 1) { $user -> role_id = 0; $user -> save(); return Redirect::back()->withErrors(['Sikeres törlés!']); }
+        return Redirect::back()->withErrors(['Felhasználó már admin.']);
     }
 }
