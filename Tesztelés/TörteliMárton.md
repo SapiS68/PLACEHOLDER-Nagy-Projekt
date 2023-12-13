@@ -26,12 +26,12 @@ A Béta teszt sikeresen zajlott. Az Alfa tesztben talált hibák javításra ker
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
 | :---: | --- | --- | --- | --- |
 | Register majd login funkcionalitás. | 2022.12.11. | Új felhasználó sikeres regisztrálása esetén legyen automatikus átirányítás és kerüljön be az adatbázisba az új felhasználó. | Sikeres regisztrációnál automatikus az átirányítás, a felhasználó megjelenik az adatbázisban. | Nincs hiba. |
-| Nincs játék nap. | 2022.12.11. | Amelyik dáture nincsen játék készítve, a no_game oldal jelenjen meg, és a sima / (home) is oda irányítson. | A tesztelés időpontjában a mai napra nincsen játék készítve, a home gomb és a / tag is automatikusan a no_game layoutra irányít át. | Nincs hiba. |
-| Modify password oldal hibakezelés. | 2022.12.11. | Nem megegyező jelszó esetén, és a régi jelszó esetén is a hibás adatok jelezze. | Hibás régi jelszó megadásánál és a két új jelszó nem megegyezése esetén is jelzi a hibát. | Nincs hiba. |
-| Add game rendszergazda oldal mezők funkcionalitása. | 2022.12.11. | 2 szekciónak kell lennie, egy kérdés feltöltő résznek amelyben szerepel 5 képfeltöltési lehetőség, 1 dátum és 1 név opció. Illetve egy játék feltöltő rész amelyben szerepel egy text mező és a kép feltöltő rész. | Az elvárásoknak megfelelő mezők jelennek meg a rendszergazdák számára, a mezőkbe tud tartalmat helyezni a felhasználó. | Nincs hiba. |
+| Nincs játék nap. | 2023.12.11. | Amelyik dáture nincsen játék készítve, a no_game oldal jelenjen meg, és a sima / (home) is oda irányítson. | A tesztelés időpontjában a mai napra nincsen játék készítve, a home gomb és a / tag is automatikusan a no_game layoutra irányít át. | Nincs hiba. |
+| Modify password oldal hibakezelés. | 2023.12.11. | Nem megegyező jelszó esetén, és a régi jelszó esetén is a hibás adatok jelezze. | Hibás régi jelszó megadásánál és a két új jelszó nem megegyezése esetén is jelzi a hibát. | Nincs hiba. |
+| Add game rendszergazda oldal mezők funkcionalitása. | 2023.12.11. | 2 szekciónak kell lennie, egy kérdés feltöltő résznek amelyben szerepel 5 képfeltöltési lehetőség, 1 dátum és 1 név opció. Illetve egy játék feltöltő rész amelyben szerepel egy text mező és a kép feltöltő rész. | Az elvárásoknak megfelelő mezők jelennek meg a rendszergazdák számára, a mezőkbe tud tartalmat helyezni a felhasználó. | Nincs hiba. |
 
 Végleges teszt hibamentesen zajlott.
 
 Tesztelést végezte és írta: Törteli Márton
 
-Befejezve: 2022.12.11.
+Befejezve: 2023.12.11.
