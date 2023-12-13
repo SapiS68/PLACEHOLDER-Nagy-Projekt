@@ -9,6 +9,7 @@ Ebben a dokumentumban lesz felsorolva az elvégzett tesztek elvárásai és ered
 ## Alfa teszt
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
+| :---: | --- | --- | --- | --- |
 | #01 | 2023.11.14. | Bejelentkezés hibakezelés kiíratása. | A hibák megjelennek, egyszerre több helyen is. | A formázás nem tökéletes. |
 | #02 | 2023.11.25. | Jelszómódosítás. | Jelszó módosítás frissül az adatbázisban is, megfelelően visszaküldd adatot a felhasználónak. | Nem találtam problémát. |
 | #03 | 2023.11.25. | Auto-complete tesztelése. | Kiíródik az adatbázisban a beírt névhez legközelebbi találatok. | Kissé inreszponzív, viszont helyesen működik. |
@@ -19,6 +20,7 @@ Következő tesztelésnél a többi funkció kerül vizsgálatra illetve elemzé
 ## Béta teszt
 
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
+| :---: | --- | --- | --- | --- |
 | #01 | 2023.12.10. | Felhasználói adatok lekérése. | Hiba oldalt jelenít meg, nem jó a lekérés. | Hibás lekérés, mivel nem jó a query. |
 | #02 | 2023.12.11. | Játék cover feltöltése. | Minden képet sikeresen lement lokálisan. | Nem találtam hibát. |
 | #03 | 2023.12.11. | Játék cover újra megadása. | A megadott képeket felül írja, a többit megtartja. | Nem találtam hibát. |
@@ -29,6 +31,7 @@ A végleges tesztelés során az összes fent felsorolt vizsgálati elem újra e
 
 ## Végleges teszt
 | Vizsgálat | Tesztelés időpontja | Elvárás | Eredmény | Hibák |
+| :---: | --- | --- | --- | --- |
 | #01 | 2023.12.13. | Helytelen felhasználó megadása rendszergazdakezelő oldalon. | Weboldal megfelelően lekezeli a hibát, nem dob át a hibakezelő oldalra. | Nem találtam problémát. |
 | #02 | 2023.12.13. | Admin megadása rendszergazdakezelő oldalon. | Weboldal lekezeli a hibát, nem adja hozzá megint az admint. | Nem találtam problémát. |
 | #03 | 2023.12.13. | Saját felhasználó törlése rendszergazdakezelő oldalon. | Weboldal lekezeli a hibát, nem tudod saját magadat törölni. | Nem találtam problémát. |
