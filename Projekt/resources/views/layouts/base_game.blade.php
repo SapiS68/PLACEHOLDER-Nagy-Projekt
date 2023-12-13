@@ -48,7 +48,7 @@
                         </div>  
                         <div class="flex justify-center"> 
                             <p class="p-1 font-extrabold text-slate-50 text-2xl flex justify-center" id="attempts_left">0</p>
-                            <p class="p-1 font-extrabold text-slate-50 text-2xl flex justify-center">. próba</p>
+                            <p class="p-1 font-extrabold text-slate-50 text-2xl flex justify-center"> próbálkozásod maradt</p>
                         </div> 
 
                         <div class="flex justify-center"> 
